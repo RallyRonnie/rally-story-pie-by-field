@@ -21,7 +21,7 @@
         var first_time = true;
         me._log("_addTimeboxSelector");
         this.down('#selector_box').add({
-            xtype:'rallyreleasecombobox',
+            xtype:'rallyiterationcombobox',
             itemId:'release_box',
             stateId: 'pxs.pie.release',
             stateful: true,
@@ -77,7 +77,7 @@
         this._log(["_getStories",release_name]);
         this._showMask("Loading stories...");
         if ( this.chart ) { this.chart.destroy(); }
-        var filters = [{property:'Release.Name',value:release_name}];
+        var filters = [{property:'Iteration.Name',value:release_name}];
         if ( release_name === this.allRelease ) {
             filters = [{property:'ObjectID',operator:'>',value:0}];
         }
